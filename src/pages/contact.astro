@@ -1,103 +1,56 @@
 ---
 import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
-import { markdownify } from "@/lib/utils/textConverter";
-import type { CollectionEntry } from "astro:content";
-import { getEntry } from "astro:content";
-import { FaAddressCard, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import { FaEnvelope, FaPhoneAlt, FaInstagram } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa6";
 
-const entry = (await getEntry(
-  "contact",
-  "-index"
-)) as CollectionEntry<"contact">;
-const { contact_form_action } = config.params;
-const { address, email, phone } = config.contactinfo;
-const { title, description, meta_title, image } = entry.data;
+const { email, phone } = config.contactinfo;
 ---
 
-<Base
-  title={title}
-  meta_title={meta_title}
-  description={description}
-  image={image}
->
-  <section class="section">
-    <div class="container">
-      <h1 set:html={markdownify(title)} class="h2 page-heading" />
-      <div class="row md:gx-5 gy-5">
-        <div class="sm:col-5 md:col-4">
-          <p class="mb-8 text-2xl font-bold text-text-dark">Contact Info</p>
-          <ul class="flex flex-col space-y-8">
-            <li>
-              <div class="flex text-text-dark items-center text-xl">
-                <FaAddressCard className="mr-3 text-primary" />
-                <p class="font-semibold">Address</p>
-              </div>
-              <p set:html={markdownify(address)} class="mt-2 leading-5 pl-8" />
-            </li>
-            <li>
-              <div class="flex text-text-dark items-center text-xl">
-                <FaEnvelope className="mr-3 text-primary" />
-                <p class="font-semibold">Email</p>
-              </div>
-              <p
-                set:html={markdownify(email)}
-                class="mt-2 leading-5 pl-8 content"
-              />
-            </li>
-            <li>
-              <div class="flex text-text-dark items-center text-xl">
-                <FaPhoneAlt className="mr-3 text-primary" />
-                <p class="font-semibold">Phone</p>
-              </div>
-              <p set:html={markdownify(phone)} class="mt-2 leading-5 pl-8" />
-            </li>
-          </ul>
-        </div>
-        <div class="sm:col-7 md:col-8">
-          <form
-            class="contact-form row gy-2 justify-center"
-            method="POST"
-            action={contact_form_action}
-          >
-            <div class="lg:col-6">
-              <label class="mb-2 block" for="name"
-                >Name <span class="text-red-600">*</span></label
-              >
-              <input
-                class="form-input w-full"
-                name="name"
-                type="text"
-                required
-              />
-            </div>
-            <div class="lg:col-6">
-              <label class="mb-2 block" for="email"
-                >Email <span class="text-red-600">*</span></label
-              >
-              <input
-                class="form-input w-full"
-                name="email"
-                type="email"
-                required
-              />
-            </div>
-            <div class="col-12">
-              <label class="mb-2 block" for="subject">Subject</label>
-              <input class="form-input w-full" name="subject" type="text" />
-            </div>
-            <div class="col-12">
-              <label class="mb-2 block" for="message"
-                >Message <span class="text-red-600">*</span></label
-              >
-              <textarea class="form-textarea w-full" rows="4"></textarea>
-            </div>
-            <div class="col-12">
-              <button class="btn btn-primary mt-2">Submit Now</button>
-            </div>
-          </form>
-        </div>
-      </div>
+<Base title="Contact" meta_title="Contact — The Orlando Guide">
+  <section class="pt-12 pb-20">
+    <div class="container max-w-xl mx-auto text-center">
+      <h1 class="h2 mb-4">Get in Touch</h1>
+      <p class="text-text mb-12">
+        We're here to help you plan the perfect Orlando experience. Reach out through any of the channels below.
+      </p>
+
+      <ul class="flex flex-col gap-6 text-left">
+        <li class="flex items-center gap-4 p-5 rounded-xl border border-border hover:border-primary transition">
+          <FaWhatsapp className="text-primary text-3xl shrink-0" />
+          <div>
+            <p class="font-semibold text-dark">WhatsApp</p>
+            <a href="https://wa.me/13214421907" target="_blank" class="text-text hover:text-primary transition">
+              +1 (321) 442-1907
+            </a>
+          </div>
+        </li>
+        <li class="flex items-center gap-4 p-5 rounded-xl border border-border hover:border-primary transition">
+          <FaEnvelope className="text-primary text-3xl shrink-0" />
+          <div>
+            <p class="font-semibold text-dark">Email</p>
+            <a href={`mailto:${email}`} class="text-text hover:text-primary transition">
+              {email}
+            </a>
+          </div>
+        </li>
+        <li class="flex items-center gap-4 p-5 rounded-xl border border-border hover:border-primary transition">
+          <FaInstagram className="text-primary text-3xl shrink-0" />
+          <div>
+            <p class="font-semibold text-dark">Instagram</p>
+            <a href="https://instagram.com/the_orlando_guide" target="_blank" class="text-text hover:text-primary transition">
+              @the_orlando_guide
+            </a>
+          </div>
+        </li>
+        <li class="flex items-center gap-4 p-5 rounded-xl border border-border hover:border-primary transition">
+          <FaPhoneAlt className="text-primary text-3xl shrink-0" />
+          <div>
+            <p class="font-semibold text-dark">Phone</p>
+            <span class="text-text">{phone}</span>
+          </div>
+        </li>
+      </ul>
     </div>
   </section>
 </Base>
