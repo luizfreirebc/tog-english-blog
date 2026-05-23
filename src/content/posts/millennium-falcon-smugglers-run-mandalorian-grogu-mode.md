@@ -4,7 +4,7 @@ meta_title: "Millennium Falcon Smugglers Run: Mandalorian & Grogu Secret Mode"
 description: "Disney quietly added a Mandalorian & Grogu experience inside Millennium Falcon: Smugglers Run. Here's exactly how to unlock it and what to expect."
 date: 2026-05-10T10:00:00Z
 image: "https://images.unsplash.com/photo-1630735564090-ba31b79c3d5b?w=1200&h=630&fit=crop&q=80"
-categories: ["theme-parks-shopping"]
+categories: ["theme-parks"]
 authors: ["the-orlando-guide"]
 tags: ["hollywood studios", "star wars", "millennium falcon", "disney secrets"]
 draft: false
