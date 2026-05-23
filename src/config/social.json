@@ -6,6 +6,11 @@
       "link": "https://www.facebook.com/profile.php?id=61550829163050"
     },
     {
+      "name": "Telegram",
+      "icon": "FaTelegram",
+      "link": "https://t.me/the_orlando_guide"
+    },
+    {
       "name": "WhatsApp",
       "icon": "FaWhatsapp",
       "link": "https://wa.me/13214421907"

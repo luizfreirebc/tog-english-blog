@@ -2,7 +2,7 @@
 import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
 import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa6";
+import { FaWhatsapp, FaTelegram } from "react-icons/fa6";
 
 const { email, phone } = config.contactinfo;
 ---
@@ -34,7 +34,16 @@ const { email, phone } = config.contactinfo;
             </a>
           </div>
         </li>
-<li class="flex items-center gap-4 p-5 rounded-xl border border-border hover:border-primary transition">
+        <li class="flex items-center gap-4 p-5 rounded-xl border border-border hover:border-primary transition">
+          <FaTelegram className="text-primary text-3xl shrink-0" />
+          <div>
+            <p class="font-semibold text-dark">Telegram</p>
+            <a href="https://t.me/the_orlando_guide" target="_blank" class="text-text hover:text-primary transition">
+              @the_orlando_guide
+            </a>
+          </div>
+        </li>
+        <li class="flex items-center gap-4 p-5 rounded-xl border border-border hover:border-primary transition">
           <FaPhoneAlt className="text-primary text-3xl shrink-0" />
           <div>
             <p class="font-semibold text-dark">Phone</p>
