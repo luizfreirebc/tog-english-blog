@@ -5,53 +5,34 @@
       "url": "/"
     },
     {
-      "name": "About",
-      "url": "/about"
+      "name": "Theme Parks & Shopping",
+      "url": "/categories/theme-parks-shopping"
+    },
+    {
+      "name": "Travel Planning",
+      "url": "/categories/travel-planning"
+    },
+    {
+      "name": "Hotels & Transportation",
+      "url": "/categories/hotels-transportation"
+    },
+    {
+      "name": "Living in Orlando",
+      "url": "/categories/living-in-orlando"
     },
     {
       "name": "Contact",
       "url": "/contact"
-    },
-    {
-      "name": "Pages",
-      "url": "",
-      "hasChildren": true,
-      "children": [
-        {
-          "name": "Authors",
-          "url": "/authors"
-        },
-        {
-          "name": "Categories",
-          "url": "/categories"
-        },
-        {
-          "name": "Tags",
-          "url": "/tags"
-        },
-        {
-          "name": "Elements",
-          "url": "/elements"
-        },
-        {
-          "name": "Privacy Policy",
-          "url": "/privacy-policy"
-        }
-      ]
     }
   ],
   "footer": [
     {
-      "name": "About",
+      "name": "About Us",
       "url": "/about"
     },
     {
       "name": "Contact",
       "url": "/contact"
-    },
-    {
-      "name": "Elements",
-      "url": "/elements"
     },
     {
       "name": "Privacy Policy",

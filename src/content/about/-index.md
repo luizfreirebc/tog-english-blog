@@ -1,23 +1,25 @@
 ---
-title: "I’m John Doe, A content writer based in LDN, Currently at Bookworm"
-meta_title: "About"
-image: "/images/author.png"
+title: "The Orlando Guide — Your Complete Orlando Experience"
+meta_title: "About The Orlando Guide"
+image: "/images/logo.png"
 draft: false
 
 what_i_do:
-  title: "What I Do"
+  title: "What We Do"
   items:
-  - title: "Content Writing"
-    description: "Purus eget ipsum elementum venenatis, quis rutrum mi semper nonpurus eget ipsum elementum venenatis."
+  - title: "Private Transfers"
+    description: "Airport-to-hotel and park-to-park private transportation so you arrive relaxed and on time, every time."
   
-  - title: "Photography"
-    description: "Aenean maximus urna magna elementum, quis rutrum mi semper non purus eget ipsum venenatis."
+  - title: "Park Guidance"
+    description: "Expert Disney and Universal itineraries built around your family’s interests, age groups and budget."
   
-  - title: "Web Research"
-    description: "Aenean maximus urna magna elementum venenatis, quis semper non purus eget ipsum venenatis."
+  - title: "Tickets & Hotels"
+    description: "We source the best deals on park tickets and Orlando accommodations so you don’t overpay."
 
 ---
 
-A content writer with over 12 years experience working across brand identity, publishing and digital products. Maecenas sit amet purus eget ipsum elementum venenatis. Aenean maximus urna magna elementum venenatis quis non purus.
+The Orlando Guide is your trusted partner for everything Orlando. We take care of your entire experience — from the moment you land to your last souvenir.
 
-Purus eget ipsum elementum venenatis. Aenean maximus urna magna elementum venenatis, quis rutrum mi semper non purus eget ipsum elementum venenatis, aenean maximus urna magna elementum.
+Private transfers, park guidance, ticket packages, hotel recommendations and insider tips to save you time and money. Whether it’s your first Disney trip or your tenth, we make sure every detail is handled.
+
+[Get in touch via WhatsApp](https://wa.me/13214421907) or follow us on [Instagram @the_orlando_guide](https://instagram.com/the_orlando_guide).
