@@ -13,87 +13,118 @@ type Props = {
 };
 
 const authors = await getSinglePage("authors");
-const { className, posts, fluid } = Astro.props;
+const { className, posts } = Astro.props;
+
+const featured = posts[0];
+const sidebarPosts = posts.slice(1, 3);
+const gridPosts = posts.slice(3);
 ---
 
-<div
-  class={`row gy-5 gx-4 ${className} ${posts.length == 1 ? "justify-center" : ""} `}
->
-  {
-    posts.map((post, i: number) => (
-      <div class={i === 0 && fluid != false ? "col-12" : "col-12 sm:col-6"}>
-        {post.data.image && (
-          <a
-            href={`/blog/${post.id}`}
-            class="rounded-lg block hover:text-primary overflow-hidden group"
-          >
+<div class={className}>
+
+  {/* ── Magazine hero: 1 featured (left) + 2 stacked (right) ── */}
+  {featured && (
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-10">
+
+      {/* Featured post */}
+      <div class="lg:col-span-7">
+        {featured.data.image && (
+          <a href={`/blog/${featured.id}`} class="rounded-lg block overflow-hidden group mb-4">
             <Image
-              class="group-hover:scale-[1.03] transition duration-300 w-full"
-              src={post.data.image}
-              alt={post.data.title}
-              width={i === 0 ? 925 : 445}
-              height={i === 0 ? 475 : 230}
+              class="group-hover:scale-[1.03] transition duration-300 w-full object-cover"
+              src={featured.data.image}
+              alt={featured.data.title}
+              width={740}
+              height={420}
             />
           </a>
         )}
-        <ul class="mt-6 mb-4 flex flex-wrap items-center text-text">
-          <li class="mr-5">
-            {authors
-              .filter((author) =>
-                post.data.authors
-                  .map((author) => slugify(author))
-                  .includes(slugify(author.data.title))
-              )
-              .map((author) => (
-                <a
-                  href={`/authors/${slugify(author.data.title)}`}
-                  class="flex items-center hover:text-primary font-medium"
-                >
-                  {author.data.image && (
-                    <Image
-                      src={author.data.image}
-                      alt={author.data.title}
-                      height={50}
-                      width={50}
-                      class="mr-2 h-6 w-6 rounded-full"
-                    />
-                  )}
-                  <span>{author.data.title}</span>
-                </a>
-              ))}
-          </li>
-          <li class="mr-5 flex items-center flex-wrap font-medium">
-            <BiCalendarEdit className="mr-1 h-5 w-5 text-gray-600" />
-            {dateFormat(post.data.date!)}
-          </li>
-          <li class="mr-5 flex items-center flex-wrap">
-            <BiCategoryAlt className="mr-1 h-[18px] w-[18px] text-gray-600" />
-
-            <ul>
-              {post.data.categories.map((category, i: number) => (
-                <li class="inline-block">
-                  <a
-                    href={`/categories/${slugify(category)}`}
-                    class="mr-2 hover:text-primary font-medium"
-                  >
-                    {humanize(category)}
-                    {i !== post.data.categories.length - 1 && ","}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </li>
-        </ul>
-        <h3 class="mb-4">
-          <a
-            href={`/blog/${post.id}`}
-            class="block hover:text-primary transition duration-300"
-          >
-            {post.data.title}
+        <span class="inline-block bg-primary text-white text-xs font-semibold px-3 py-1 rounded mb-3 uppercase tracking-wide">
+          {humanize(featured.data.categories[0])}
+        </span>
+        <h2 class="mb-3">
+          <a href={`/blog/${featured.id}`} class="hover:text-primary transition duration-300 leading-snug">
+            {featured.data.title}
           </a>
-        </h3>
-        <p class="text-text line-clamp-2">{plainify(post.body ?? "")}</p>
+        </h2>
+        <p class="text-text line-clamp-2 mb-3">{plainify(featured.body ?? "")}</p>
+        <span class="text-sm text-text-light flex items-center gap-1">
+          <BiCalendarEdit className="h-4 w-4" />
+          {dateFormat(featured.data.date!)}
+        </span>
       </div>
-    ))
-  }
+
+      {/* Sidebar: 2 stacked posts */}
+      {sidebarPosts.length > 0 && (
+        <div class="lg:col-span-5 flex flex-col gap-6">
+          {sidebarPosts.map((post) => (
+            <div class="flex gap-4 items-start border-b border-border pb-6 last:border-0 last:pb-0">
+              {post.data.image && (
+                <a href={`/blog/${post.id}`} class="shrink-0 rounded overflow-hidden block group">
+                  <Image
+                    class="group-hover:scale-[1.03] transition duration-300 object-cover"
+                    src={post.data.image}
+                    alt={post.data.title}
+                    width={160}
+                    height={110}
+                  />
+                </a>
+              )}
+              <div class="min-w-0">
+                <span class="text-xs font-semibold text-primary uppercase tracking-wide">
+                  {humanize(post.data.categories[0])}
+                </span>
+                <h4 class="mt-1 mb-2 leading-snug">
+                  <a href={`/blog/${post.id}`} class="hover:text-primary transition duration-300 line-clamp-2">
+                    {post.data.title}
+                  </a>
+                </h4>
+                <span class="text-xs text-text-light flex items-center gap-1">
+                  <BiCalendarEdit className="h-3 w-3" />
+                  {dateFormat(post.data.date!)}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  )}
+
+  {/* ── Grid row: remaining posts ── */}
+  {gridPosts.length > 0 && (
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {gridPosts.map((post) => (
+        <div class="border border-border rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+          {post.data.image && (
+            <a href={`/blog/${post.id}`} class="block overflow-hidden group">
+              <Image
+                class="group-hover:scale-[1.03] transition duration-300 w-full object-cover"
+                src={post.data.image}
+                alt={post.data.title}
+                width={400}
+                height={220}
+              />
+            </a>
+          )}
+          <div class="p-4">
+            <span class="text-xs font-semibold text-primary uppercase tracking-wide">
+              {humanize(post.data.categories[0])}
+            </span>
+            <h4 class="mt-2 mb-2 leading-snug">
+              <a href={`/blog/${post.id}`} class="hover:text-primary transition duration-300 line-clamp-2">
+                {post.data.title}
+              </a>
+            </h4>
+            <p class="text-sm text-text line-clamp-2 mb-3">{plainify(post.body ?? "")}</p>
+            <span class="text-xs text-text-light flex items-center gap-1">
+              <BiCalendarEdit className="h-3 w-3" />
+              {dateFormat(post.data.date!)}
+            </span>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+
 </div>
