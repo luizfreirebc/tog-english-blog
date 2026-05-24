@@ -3,7 +3,7 @@ title: "Disney Park Reservations Through the App: What International Visitors Ne
 meta_title: "Disney World Park Reservations App Guide for International Visitors"
 description: "Booking Disney park reservations through the My Disney Experience app can be confusing for international visitors. This guide walks you through every step."
 date: 2026-05-08T10:00:00Z
-image: "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=1200&h=630&fit=crop&q=80"
+image: "https://images.unsplash.com/photo-1678667720699-5c0fc04ac166?w=1200&h=630&fit=crop&q=80"
 categories: ["travel-planning"]
 authors: ["the-orlando-guide"]
 tags: ["disney app", "park reservations", "my disney experience", "planning", "international visitors"]

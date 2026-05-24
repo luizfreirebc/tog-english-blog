@@ -3,7 +3,7 @@ title: "Rock 'n' Roller Coaster Muppets: Everything About the 2026 Reopening"
 meta_title: "Rock 'n' Roller Coaster Muppets 2026 — Reopening Guide & What Changed"
 description: "Rock 'n' Roller Coaster reopens in 2026 with a full Muppets overlay. Here's what changed, what stayed the same, and whether the new version lives up to the original."
 date: 2026-05-20T10:00:00Z
-image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=1200&h=630&fit=crop&q=80"
+image: "https://images.unsplash.com/photo-1628835788312-41d61f5ddce8?w=1200&h=630&fit=crop&q=80"
 categories: ["theme-parks"]
 authors: ["the-orlando-guide"]
 tags: ["hollywood studios", "rock n roller coaster", "muppets", "thrill rides", "disney 2026"]

@@ -3,7 +3,7 @@ title: "Cool Kids Summer at Disney World 2026: What's Worth It"
 meta_title: "Disney World Summer 2026 — Cool Kids Summer Review & Tips"
 description: "Disney's Cool Kids Summer 2026 lineup is here — new shows, updated attractions and seasonal events. We break down what's actually worth your time and money."
 date: 2026-05-15T10:00:00Z
-image: "https://images.unsplash.com/photo-1569867406218-5527e52e89d2?w=1200&h=630&fit=crop&q=80"
+image: "https://images.unsplash.com/photo-1768094886806-d7ccd978941a?w=1200&h=630&fit=crop&q=80"
 categories: ["theme-parks"]
 authors: ["the-orlando-guide"]
 tags: ["disney world", "summer 2026", "magic kingdom", "epcot", "kids"]

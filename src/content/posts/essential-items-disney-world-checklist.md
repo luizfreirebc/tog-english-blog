@@ -3,7 +3,7 @@ title: "7 Essential Items for Disney World You Cannot Forget"
 meta_title: "Disney World Packing List: 7 Items You Absolutely Need"
 description: "These 7 items will make or break your Disney World day. Pack them before you leave the hotel — your future self will thank you."
 date: 2026-05-01T10:00:00Z
-image: "https://images.unsplash.com/photo-1627634777217-c864268db30c?w=1200&h=630&fit=crop&q=80"
+image: "https://images.unsplash.com/photo-1522199710521-72d69614c702?w=1200&h=630&fit=crop&q=80"
 categories: ["travel-planning"]
 authors: ["the-orlando-guide"]
 tags: ["disney packing", "what to bring", "disney tips", "checklist", "theme park essentials"]

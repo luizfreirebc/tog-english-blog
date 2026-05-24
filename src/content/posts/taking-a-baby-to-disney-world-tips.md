@@ -3,7 +3,7 @@ title: "Taking a Baby to Disney World: Essential Tips for Families"
 meta_title: "Taking a Baby to Disney World: Essential Tips"
 description: "Planning to bring a baby to Walt Disney World? Here's everything you need to know about strollers, Baby Care Centers, feeding, and surviving the parks with an infant."
 date: 2026-05-23T10:00:00Z
-image: "https://images.unsplash.com/photo-1627634777217-c864268db30c?w=1200&h=630&fit=crop&q=80"
+image: "https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?w=1200&h=630&fit=crop&q=80"
 categories: ["travel-planning"]
 authors: ["the-orlando-guide"]
 tags: ["disney-world", "family-travel", "disney-tips", "baby-travel", "magic-kingdom", "travel-planning"]
