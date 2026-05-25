@@ -80,6 +80,12 @@ export default defineConfig({
             options: [{ value: "the-orlando-guide", label: "The Orlando Guide" }],
           },
           {
+            type: "string",
+            name: "focus_keyword",
+            label: "Focus Keyword (SEO)",
+            description: "Main keyword this post should rank for",
+          },
+          {
             type: "boolean",
             name: "draft",
             label: "Draft (unpublished)",
