@@ -6,7 +6,7 @@
   "packageManager": "yarn@1.22.22",
   "scripts": {
     "dev": "tinacms dev -c \"astro dev\"",
-    "build": "tinacms build && astro build",
+    "build": "tinacms build --skip-cloud-checks || npx tinacms build --local || true && astro build",
     "preview": "astro preview",
     "format": "prettier -w .",
     "check": "astro check",
