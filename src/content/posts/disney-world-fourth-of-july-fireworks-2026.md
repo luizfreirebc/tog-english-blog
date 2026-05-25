@@ -3,7 +3,7 @@ title: "Disney World 4th of July 2026: Fireworks, Dates & Tips"
 meta_title: "Disney World 4th of July 2026: Fireworks & Planning Tips"
 description: "America turns 250 in 2026 and Disney World is going all out. Here are the confirmed fireworks dates, best viewing spots, and must-know planning tips."
 date: 2026-05-25T10:00:00Z
-image: https://images.unsplash.com/photo-1627035983655-0ceec61bb733?w=1200&h=630&fit=crop&q=80
+image: https://images.unsplash.com/photo-1524008279394-3aed4643b30b?w=1200&h=630&fit=crop&q=80
 categories: ["theme-parks"]
 author: the-orlando-guide
 tags: ["disney-world", "fourth-of-july", "magic-kingdom", "fireworks", "2026"]
